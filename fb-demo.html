@@ -1,1 +1,86 @@
 
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <title>Facebook Login Demo – Awareness</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background:#f0f2f5;
+      font-family: Helvetica, Arial, sans-serif;
+    }
+    .card {
+      max-width:360px;
+      margin:40px auto;
+      background:#fff;
+      padding:20px;
+      border-radius:8px;
+      box-shadow:0 2px 8px rgba(0,0,0,.1);
+    }
+    h1 {
+      text-align:center;
+      color:#1877f2;
+      margin-bottom:10px;
+    }
+    .demo {
+      text-align:center;
+      font-size:13px;
+      color:#d32f2f;
+      margin-bottom:10px;
+    }
+    input {
+      width:100%;
+      padding:12px;
+      margin:8px 0;
+      border-radius:6px;
+      border:1px solid #ddd;
+      font-size:15px;
+    }
+    button {
+      width:100%;
+      background:#1877f2;
+      color:#fff;
+      border:none;
+      padding:12px;
+      font-size:16px;
+      border-radius:6px;
+      cursor:pointer;
+    }
+    .alert {
+      display:none;
+      margin-top:15px;
+      background:#fff3cd;
+      color:#856404;
+      padding:10px;
+      border-radius:6px;
+      font-size:14px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>facebook</h1>
+    <div class="demo">⚠️ এটি একটি শিক্ষামূলক DEMO</div>
+
+    <input type="text" placeholder="Email or phone number">
+    <input type="password" placeholder="Password">
+
+    <button onclick="warnUser()">Log In</button>
+
+    <div class="alert" id="alert">
+      ❌ কোনো তথ্য নেওয়া হয়নি।<br><br>
+      👉 কিন্তু বাস্তবে এমন পেজে লগইন করলে আপনার Facebook ID হ্যাক হতে পারে।  
+      🔐 সবসময় URL, বানান ও HTTPS চেক করুন।
+    </div>
+  </div>
+
+  <script>
+    function warnUser() {
+      document.getElementById("alert").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
